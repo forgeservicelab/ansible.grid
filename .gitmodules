@@ -1,0 +1,9 @@
+[submodule "roles/forge_users"]
+	path = roles/forge_users
+	url = ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/forge_users.git
+[submodule "roles/common"]
+	path = roles/common
+	url = ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/common.git
+[submodule "roles/grid"]
+	path = roles/grid
+	url = ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/grid.git
