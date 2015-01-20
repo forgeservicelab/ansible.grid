@@ -1,0 +1,6 @@
+#common
+- src: git+ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/common.git
+#forge_users
+- src: git+ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/forge_users.git
+#grid
+- src: git+ssh://gitlab@git.forgeservicelab.fi:10022/ansible-roles/grid.git
