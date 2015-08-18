@@ -1,0 +1,23 @@
+---
+- hosts: hub
+  sudo: true
+  tasks:
+    - fetch:
+        src: /var/lib/jenkins/.ssh/id_dsa
+        dest: id_dsa
+        flat: yes
+      sudo_user: jenkins
+
+- hosts: nodes
+  sudo: true
+  roles:
+    - role: common
+      web_domain: "{{ inventory_hostname }}-ci.forgeservicelab.fi"
+
+    - role: forge_users
+      forge_users_private_token: <PRIVATE_TOKEN>
+      forge_users_list:
+        - ci 
+
+    - role: grid
+      jenkins_user: ci
